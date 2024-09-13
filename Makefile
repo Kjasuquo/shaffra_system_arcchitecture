@@ -1,5 +1,5 @@
 run:
-	go run main.go
+	go run cmd/main.go
 
 mock-repo:
 	mockgen -source=internal/repository/repository.go -destination=internal/repository/mocks/repository_mock.go -package=mocks
