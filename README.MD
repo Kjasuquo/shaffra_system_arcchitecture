@@ -56,11 +56,11 @@ ________________________________________________________________________________
 - Tried using `http://localhost:8080/create?name=Joseph` to create a user, but it threw an error that connection was refused, and it returned status code 200 despite the error
 
 ## Improvements
-1. Provided database in the makefile connected it appropriately. All you have to run `make buggy-db` to spin it up before starting the service with `go run buggy_project.go`
+1. Provisioned database in the makefile and connected it appropriately. Run `make buggy-db` to spin it up before starting the service with `go run buggy_project.go`
 2. Handled error while connecting to database
 3. Create the 'users' table if it doesn't exist. This ideally should be in the makefile while provisioning db
-4. Handled error and return with the write status code in the getUsers endpoint
-5. In the createUser, handled error if username is not present in query
+4. Handled error and returned with the write status code in the `getUsers` endpoint
+5. In the `createUser`, handled error if username is not present in query
 6. Also re-wrote the insert db query to guard against SQL injection attacks
 7. And, also handled the error of that db query with the right status code
 
